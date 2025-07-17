@@ -16,9 +16,9 @@ export interface CosmicObject {
 export interface Post extends CosmicObject {
   type: 'posts';
   metadata: {
-    title?: string;
+    title: string; // Required field based on Cosmic CMS structure
     excerpt?: string;
-    content?: string;
+    content: string; // Required field based on Cosmic CMS structure
     featured_image?: {
       url: string;
       imgix_url: string;
@@ -34,7 +34,7 @@ export interface Post extends CosmicObject {
 export interface Author extends CosmicObject {
   type: 'authors';
   metadata: {
-    name?: string;
+    name: string; // Required field based on Cosmic CMS structure
     bio?: string;
     photo?: {
       url: string;
@@ -51,7 +51,7 @@ export interface Author extends CosmicObject {
 export interface Category extends CosmicObject {
   type: 'categories';
   metadata: {
-    name?: string;
+    name: string; // Required field based on Cosmic CMS structure
     description?: string;
     color?: string;
   };
